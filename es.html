@@ -336,6 +336,25 @@ nav.scrolled{top:0}
 .hero-sensora:hover .hs-slogan{color:#fff}
 @media(max-width:800px){.hero-sensora{margin-top:34px;padding-top:20px}.hs-slogan{font-size:1.2rem}}
 </style>
+<style>
+.nav-toggle{display:none;align-items:center;gap:9px;background:none;border:0;cursor:pointer;padding:6px 4px;position:relative}
+.nav-toggle .nt-label{font-family:var(--sans);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft)}
+.nav-toggle .nt-lines{display:flex;flex-direction:column;gap:5px}
+.nav-toggle .nt-lines span{display:block;height:2px;width:24px;background:var(--gold-soft);transition:.3s}
+.nav-toggle::before{content:"";position:absolute;inset:-5px -7px;border-radius:10px;animation:navPulse 2.6s infinite;pointer-events:none}
+@keyframes navPulse{0%{box-shadow:0 0 0 0 rgba(203,178,135,.5)}70%{box-shadow:0 0 0 13px rgba(203,178,135,0)}100%{box-shadow:0 0 0 0 rgba(203,178,135,0)}}
+body.mm-open .nav-toggle::before{animation:none}
+.mobile-menu{position:fixed;inset:0;z-index:130;background:linear-gradient(160deg,#0e1a26,#14283a);display:flex;flex-direction:column;justify-content:center;padding:90px 9vw 60px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{color:#f4efe6;text-decoration:none;font-family:var(--serif);font-size:1.6rem;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-menu a.mm-cta{color:#fff;background:var(--gold);border:0;text-align:center;border-radius:2px;margin-top:26px;font-family:var(--sans);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;padding:17px}
+.mobile-menu .mm-langs{display:flex;gap:26px;margin-top:26px}
+.mobile-menu .mm-langs a{font-family:var(--sans);font-size:.82rem;letter-spacing:.18em;border-bottom:0;padding:0;color:rgba(244,239,230,.55)}
+.mobile-menu .mm-langs a.active{color:var(--gold-soft)}
+.mm-close{position:absolute;top:20px;right:8vw;background:none;border:0;color:var(--gold-soft);font-size:2.3rem;line-height:1;cursor:pointer}
+body.mm-open{overflow:hidden}
+@media(max-width:920px){.nav-toggle{display:flex}.nav-links{display:none!important}}
+</style>
 </head>
 <body>
 
@@ -356,6 +375,7 @@ nav.scrolled{top:0}
       <a class="lang active">ES</a>
     </div>
   </div>
+  <button class="nav-toggle" aria-label="Abrir menú" onclick="document.getElementById('mmenu').classList.add('open');document.body.classList.add('mm-open')"><span class="nt-label">Menú</span><span class="nt-lines"><span></span><span></span><span></span></span></button>
 </nav>
 
 <!-- HERO -->
@@ -558,5 +578,16 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('.lang-switch a[href]').forEach(a=>a.addEventListener('click',()=>{try{sessionStorage.setItem('agm_lang','1')}catch(e){}}));
 </script>
+<div class="mobile-menu" id="mmenu">
+  <button class="mm-close" aria-label="Cerrar menú" onclick="document.getElementById('mmenu').classList.remove('open');document.body.classList.remove('mm-open')">×</button>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#para-quien">Para quién</a>
+  <a href="#como-trabajo">Cómo trabajo</a>
+  <a href="sensora-es.html">Sensora Care</a>
+  <a class="mm-cta" href="https://wa.me/34679948424?text=Buenos%20d%C3%ADas%20Sr.%20Garcia%2C%20me%20interesa%20una%20primera%20conversaci%C3%B3n%20confidencial." target="_blank" rel="noopener">Conversación privada</a>
+  <div class="mm-langs"><a href="/">DE</a><a href="/en.html">EN</a><a class="active">ES</a></div>
+</div>
+<script>document.querySelectorAll('#mmenu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mmenu').classList.remove('open');document.body.classList.remove('mm-open')})});</script>
 </body>
 </html>
