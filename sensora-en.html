@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) mit Consent Mode -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPPKYNX3SS"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});
+gtag('js',new Date());
+gtag('config','G-LPPKYNX3SS');
+(function(){try{if(localStorage.getItem('agm_consent')==='granted'){gtag('consent','update',{'analytics_storage':'granted'});}}catch(e){}})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0e1a26">
@@ -567,5 +576,18 @@ document.querySelectorAll('.lang-switch a[href]').forEach(a=>a.addEventListener(
   <div class="mm-langs"><a href="sensora.html">DE</a><a class="active">EN</a><a href="sensora-es.html">ES</a></div>
 </div>
 <script>document.querySelectorAll('#mmenu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mmenu').classList.remove('open');document.body.classList.remove('mm-open')})});</script>
+<style>
+.cookie-banner{display:none;position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(14,26,38,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(203,178,135,.35);padding:18px 5vw;color:rgba(244,239,230,.85);font-family:var(--sans);font-size:.82rem;box-shadow:0 -12px 34px rgba(6,12,18,.35)}
+.cookie-banner .cb-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cookie-banner a{color:var(--gold-soft);text-decoration:underline}
+.cb-actions{display:flex;gap:10px;flex-shrink:0}
+.cb-actions button{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:11px 18px;border-radius:2px;cursor:pointer;border:1px solid var(--gold-soft);background:none;color:var(--gold-soft);transition:.3s}
+.cb-actions .cb-accept{background:var(--gold);border-color:var(--gold);color:#fff}
+.cb-actions .cb-accept:hover{background:transparent;color:var(--gold-soft)}
+.cb-actions .cb-decline:hover{color:#fff;border-color:#fff}
+@media(max-width:700px){.cookie-banner .cb-inner{gap:12px}.cb-actions{width:100%}.cb-actions button{flex:1}}
+</style>
+<div class="cookie-banner" id="cookie-banner"><div class="cb-inner"><div class="cb-text">We use cookies for anonymous statistics (Google Analytics) to improve our service. The choice is yours. <a href="privacy.html">Privacy</a></div><div class="cb-actions"><button class="cb-decline">Only necessary</button><button class="cb-accept">Accept all</button></div></div></div>
+<script>(function(){var b=document.getElementById("cookie-banner");if(!b)return;var has=false;try{has=!!localStorage.getItem("agm_consent");}catch(e){}if(!has){b.style.display="block";}function set(v){try{localStorage.setItem("agm_consent",v);}catch(e){}b.style.display="none";if(v==="granted"&&window.gtag){gtag("consent","update",{"analytics_storage":"granted"});}}b.querySelector(".cb-accept").addEventListener("click",function(){set("granted");});b.querySelector(".cb-decline").addEventListener("click",function(){set("denied");});})();</script>
 </body>
 </html>
