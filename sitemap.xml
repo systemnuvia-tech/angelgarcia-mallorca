@@ -76,6 +76,25 @@
   </url>
   <url>
     <loc>https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-es.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-es.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.angelgarcia-mallorca.com/blog-gesundheit-mallorca-leitfaden-es.html"/>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
